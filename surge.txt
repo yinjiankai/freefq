@@ -1,0 +1,46 @@
+[General]
+hide-vpn-icon = true
+loglevel = notify
+doh-server = https://doh.pub/dns-query
+dns-server = 223.5.5.5, 114.114.114.114
+tun-excluded-routes = 0.0.0.0/8, 0.0.0.0/31, 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.168.0.0/16, 192.88.99.0/24, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+skip-proxy = localhost, *.local, injections.adguard.org, local.adguard.org, captive.apple.com, guzzoni.apple.com, 0.0.0.0/8, 0.0.0.0/31, 10.0.0.0/8, 17.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.168.0.0/16, 192.88.99.0/24, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 240.0.0.0/4, 255.255.255.255/32
+wifi-assist = true
+allow-wifi-access = true
+wifi-access-http-port = 6152
+wifi-access-socks5-port = 6153
+http-listen = 0.0.0.0:6152
+socks5-listen = 0.0.0.0:6153
+external-controller-access = AyaFreeProxy@0.0.0.0:6170
+replica = false
+tls-provider = openssl
+network-framework = false
+exclude-simple-hostnames = true
+ipv6 = true
+test-timeout = 4
+proxy-test-url = http://www.gstatic.com/generate_204
+geoip-maxmind-url = https://cdn.jsdelivr.net/gh/Hackl0us/GeoIP2-CN@release/Country.mmdb
+http-api = Yuyuko65@0.0.0.0:6171
+http-api-tls = false
+http-api-web-dashboard = true
+
+[Replica]
+hide-apple-request = 1
+hide-crashlytics-request = true
+use-keyword-filter = false
+hide-udp = 0
+hide-crash-reporter-request = 0
+
+[Proxy]
+🇯🇵日本公益26 = ss, 101.67.8.158, 17851, encrypt-method=aes-128-gcm,password=N0dzBuYixHiuewi
+🇬🇧英国公益4 = ss, 212.38.189.174, 5001, encrypt-method=aes-256-gcm,password=Y6R9pAtvxxzmGC
+
+[Proxy Group]
+免费节点 = select, 🇬🇧英国公益4, 🇯🇵日本公益26, no-alert=0, hidden=0, persistent=0
+
+[Rule]
+GEOIP,CN,DIRECT
+FINAL,DIRECT,dns-failed
+
+[URL Rewrite]
+^https?://(www.)?(g|google).cn https://www.google.com 302
