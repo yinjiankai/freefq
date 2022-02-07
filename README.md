@@ -1,6 +1,6 @@
 # 免费小火箭节点
 每日更新节点，直接在复制整段文字到小火箭内即可。<br>
-节点地址：https://raw.githubusercontent.com/6512345/freefq/main/list.txt<br>
+节点地址：https://raw.githubusercontent.com/winicu/freefq/main/list.txt<br>
 **大部分节点都有速度保障** <br>
 
 我们有很多偏远地区的节点，包括**叙利亚，乌干达，印度，巴基斯坦，伊拉克，朝鲜**的节点        
